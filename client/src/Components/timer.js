@@ -16,11 +16,19 @@ import ReactCountdownClock from "react-countdown-clock";
          pausation = true;
        } else {
          pausation = false;}
-       };
     };
 
-      return (
-        "Hello"
+    return (
+      <ReactCountdownClock
+        seconds={60 * minutes}
+        color="#232323"
+        alpha={0.5}
+        size={100}
+        onComplete={this.myCallback}
+        paused={pausation}
+        weight={20}
+        onClick={()=> toggle(pausation)}
+      />
       );
     }
   }
